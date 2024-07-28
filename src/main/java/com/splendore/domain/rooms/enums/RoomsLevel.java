@@ -1,4 +1,4 @@
-package com.splendore.domain.rooms;
+package com.splendore.domain.rooms.enums;
 
 public enum RoomsLevel {
     PLATINUM,

@@ -1,6 +1,6 @@
-package com.splendore.domain.rooms;
+package com.splendore.domain.rooms.enums;
 
-public enum RoomStatus {
+public enum RoomsStatus {
     FREE,
     RESERVED,
     CLEANING_UP,

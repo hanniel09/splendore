@@ -1,5 +1,8 @@
 package com.splendore.domain.rooms;
 
+import com.splendore.domain.rooms.enums.RoomsServices;
+import com.splendore.domain.rooms.enums.RoomsStatus;
+import com.splendore.domain.rooms.enums.RoomsLevel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,18 +18,17 @@ import lombok.Setter;
 public class Rooms {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
-    private RoomStatus roomStatus;
+    private RoomsStatus roomsStatus;
 
     private long floorNumber;
 
     private long roomNumber;
 
-    private RoomsLevel roomLevel;
+    private RoomsLevel roomsLevel;
 
-    private RoomServices roomServices;
+    private RoomsServices roomsServices;
 
     private long bedsInRoomNumber;
-
 }
