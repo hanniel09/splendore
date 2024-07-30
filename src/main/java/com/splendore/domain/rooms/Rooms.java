@@ -24,11 +24,21 @@ public class Rooms {
 
     private long floorNumber;
 
-    private long roomNumber;
+    private long roomsNumber;
 
     private RoomsLevel roomsLevel;
 
     private RoomsServices roomsServices;
 
     private long bedsInRoomNumber;
+
+    public Rooms(RoomsRequestDTO data) {
+        this.roomsStatus = data.roomStatus();
+        this.floorNumber = data.floorNumber();
+        this.roomsNumber = data.roomsNumber();
+        this.roomsLevel = data.roomsLevel();
+        this.roomsServices = data.roomsServices();
+        this.bedsInRoomNumber = data.bedsInRoomNumber();
+    }
+
 }

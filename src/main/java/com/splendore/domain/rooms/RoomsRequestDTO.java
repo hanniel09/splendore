@@ -4,5 +4,5 @@ import com.splendore.domain.rooms.enums.RoomsServices;
 import com.splendore.domain.rooms.enums.RoomsStatus;
 import com.splendore.domain.rooms.enums.RoomsLevel;
 
-public record RoomsRequestDTO(RoomsStatus roomStatus, long floorNumber, long roomNumber, RoomsLevel roomsLevel, RoomsServices roomsServices, long bedsInRoomNumber) {
+public record RoomsRequestDTO(RoomsStatus roomStatus, long floorNumber, long roomsNumber, RoomsLevel roomsLevel, RoomsServices roomsServices, long bedsInRoomNumber) {
 }
