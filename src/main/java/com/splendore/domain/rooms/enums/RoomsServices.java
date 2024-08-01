@@ -1,7 +1,10 @@
 package com.splendore.domain.rooms.enums;
 
 public enum RoomsServices {
-    NOTHING,
-    CLEANING,
-    TROUSSEAU
+    BREAKFAST,
+    AC,
+    PARKING,
+    POOL,
+    GYM,
+    ALL
 }

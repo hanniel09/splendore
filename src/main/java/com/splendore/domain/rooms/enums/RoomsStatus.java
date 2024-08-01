@@ -1,7 +1,7 @@
 package com.splendore.domain.rooms.enums;
 
 public enum RoomsStatus {
-    FREE,
+    AVAILABLE,
     RESERVED,
     CLEANING_UP,
     IN_MAINTENANCE,
