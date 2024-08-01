@@ -3,6 +3,7 @@ package com.splendore.domain.rooms;
 import com.splendore.domain.rooms.enums.RoomsServices;
 import com.splendore.domain.rooms.enums.RoomsStatus;
 import com.splendore.domain.rooms.enums.RoomsLevel;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,18 +19,25 @@ import lombok.Setter;
 public class Rooms {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Schema(description = "Unique identifier the room", example = "1")
     private Long id;
 
+    @Schema(description = "Current status of the room", example = "AVAILABLE", allowableValues = {"AVAILABLE", "OCCUPIED", "RESERVED"})
     private RoomsStatus roomsStatus;
 
+    @Schema(description = "Floor number where the room is located", example = "2")
     private long floorNumber;
 
+    @Schema(description = "Room number", example="205")
     private long roomsNumber;
 
+    @Schema(description = "Level of the room", example = "GOLD", allowableValues = {"GOLD", "PLATINUM", "DIAMOND", "MASTER", "PRESIDENTIAL"})
     private RoomsLevel roomsLevel;
 
+    @Schema(description = "Services available in the room", example = "BREAKFAST", allowableValues = {"BREAKFAST", "LUNCH", "GYM", "SPA", "ALL"})
     private RoomsServices roomsServices;
 
+    @Schema(description = "Number of beds in the room", example = "2")
     private long bedsInRoomNumber;
 
     public Rooms(RoomsRequestDTO data) {
