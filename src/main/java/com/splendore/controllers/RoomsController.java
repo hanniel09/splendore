@@ -40,4 +40,10 @@ public class RoomsController {
         Rooms rooms = roomsService.updateRoom(data, id);
         return ResponseEntity.ok(rooms);
     }
+
+    @DeleteMapping(path = "/{id}")
+    public ResponseEntity<Void> deleteRoom(@PathVariable int id){
+        roomsService.deleteRoom(id);
+        return ResponseEntity.noContent().build();
+    }
 }
