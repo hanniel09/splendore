@@ -10,10 +10,10 @@ public record RoomsRequestDTO(
         RoomsStatus roomStatus,
 
         @Schema(description = "Floor number where the room is located", example = "2")
-        long floorNumber,
+        Long floorNumber,
 
         @Schema(description = "Room number", example = "205")
-        long roomsNumber,
+        Long roomsNumber,
 
         @Schema(description = "Level of the room", example = "GOLD", allowableValues = {"GOLD", "PLATINUM", "DIAMOND", "MASTER", "PRESIDENTIAL"})
         RoomsLevel roomsLevel,
@@ -22,5 +22,6 @@ public record RoomsRequestDTO(
         RoomsServices roomsServices,
 
         @Schema(description = "Number of beds in the room", example = "2")
-        long bedsInRoomNumber) {
+        Long bedsInRoomNumber
+        ) {
 }
