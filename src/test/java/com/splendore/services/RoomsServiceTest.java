@@ -33,7 +33,6 @@ public class RoomsServiceTest {
             return new RoomsService();
         }
 
-        ;
     }
 
     @InjectMocks
@@ -50,9 +49,9 @@ public class RoomsServiceTest {
 
     @BeforeEach
     void setUp() {
-        rooms1 = new Rooms(1L, RoomsStatus.RESERVED, 1, 101, RoomsLevel.MASTER, RoomsServices.ALL, 2);
-        rooms2 = new Rooms(2L, RoomsStatus.AVAILABLE, 2, 102, RoomsLevel.DIAMOND, RoomsServices.ALL, 3);
-        roomsRequestDTO = new RoomsRequestDTO(RoomsStatus.RESERVED, 1, 101, RoomsLevel.MASTER, RoomsServices.ALL, 2);
+        rooms1 = new Rooms(1L, RoomsStatus.RESERVED, 1L, 101L, RoomsLevel.MASTER, RoomsServices.ALL, 2L);
+        rooms2 = new Rooms(2L, RoomsStatus.AVAILABLE, 2L, 102L, RoomsLevel.DIAMOND, RoomsServices.ALL, 3L);
+        roomsRequestDTO = new RoomsRequestDTO(RoomsStatus.RESERVED, 1L, 101L, RoomsLevel.MASTER, RoomsServices.ALL, 2L);
     }
 
     @Test

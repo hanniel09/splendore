@@ -53,9 +53,9 @@ public class RoomsControllerTest {
 
     @BeforeEach
     void setUp() {
-        roomsRequestDTO = new RoomsRequestDTO(RoomsStatus.RESERVED, 1, 101, RoomsLevel.MASTER, RoomsServices.ALL, 3);
-        roomsResponseDTO = new RoomsResponseDTO(1L, RoomsStatus.RESERVED, 1, 101, RoomsLevel.MASTER, RoomsServices.ALL, 3);
-        rooms = new Rooms(2L, RoomsStatus.RESERVED, 1, 101, RoomsLevel.MASTER, RoomsServices.ALL, 3);
+        roomsRequestDTO = new RoomsRequestDTO(RoomsStatus.RESERVED, 1L, 101L, RoomsLevel.MASTER, RoomsServices.ALL, 3L);
+        roomsResponseDTO = new RoomsResponseDTO(1L, RoomsStatus.RESERVED, 1L, 101L, RoomsLevel.MASTER, RoomsServices.ALL, 3L);
+        rooms = new Rooms(2L, RoomsStatus.RESERVED, 1L, 101L, RoomsLevel.MASTER, RoomsServices.ALL, 3L);
     }
 
     @Test
