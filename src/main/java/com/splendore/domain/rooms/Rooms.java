@@ -1,5 +1,6 @@
 package com.splendore.domain.rooms;
 
+import com.splendore.domain.clients.Client;
 import com.splendore.domain.rooms.enums.RoomsServices;
 import com.splendore.domain.rooms.enums.RoomsStatus;
 import com.splendore.domain.rooms.enums.RoomsLevel;
@@ -9,6 +10,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Table
 @Entity
@@ -26,10 +30,10 @@ public class Rooms {
     private RoomsStatus roomsStatus;
 
     @Schema(description = "Floor number where the room is located", example = "2")
-    private long floorNumber;
+    private Long floorNumber;
 
     @Schema(description = "Room number", example="205")
-    private long roomsNumber;
+    private Long roomsNumber;
 
     @Schema(description = "Level of the room", example = "GOLD", allowableValues = {"GOLD", "PLATINUM", "DIAMOND", "MASTER", "PRESIDENTIAL"})
     private RoomsLevel roomsLevel;
@@ -38,7 +42,10 @@ public class Rooms {
     private RoomsServices roomsServices;
 
     @Schema(description = "Number of beds in the room", example = "2")
-    private long bedsInRoomNumber;
+    private Long bedsInRoomNumber;
+
+    @ManyToMany(mappedBy = "rooms")
+    private List<Client> clients = new ArrayList<>();
 
     public Rooms(RoomsRequestDTO data) {
         this.roomsStatus = data.roomStatus();
@@ -49,4 +56,13 @@ public class Rooms {
         this.bedsInRoomNumber = data.bedsInRoomNumber();
     }
 
+    public Rooms(long id, RoomsStatus roomsStatus, long floorNumber, long roomsNumber, RoomsLevel roomsLevel, RoomsServices roomsServices, long bedsInRoomNumber) {
+        this.id = id;
+        this.roomsStatus = roomsStatus;
+        this.floorNumber = floorNumber;
+        this.roomsNumber = roomsNumber;
+        this.roomsLevel = roomsLevel;
+        this.roomsServices = roomsServices;
+        this.bedsInRoomNumber = bedsInRoomNumber;
+    }
 }
