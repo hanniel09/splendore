@@ -6,7 +6,7 @@ import com.splendore.domain.rooms.RoomsResponseDTO;
 import com.splendore.domain.rooms.enums.RoomsLevel;
 import com.splendore.domain.rooms.enums.RoomsServices;
 import com.splendore.domain.rooms.enums.RoomsStatus;
-import com.splendore.exceptions.RoomNotFoundException;
+import com.splendore.exceptions.NotFoundException;
 import com.splendore.repositories.RoomsRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -154,7 +154,7 @@ public class RoomsServiceTest {
     public void testDeleteRoomNotFound() {
         when(roomsRepository.existsById(1L)).thenReturn(false);
 
-        assertThrows(RoomNotFoundException.class, () -> {
+        assertThrows(NotFoundException.class, () -> {
             roomsService.deleteRoom(1L);
         });
 
