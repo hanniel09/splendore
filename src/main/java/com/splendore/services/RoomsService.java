@@ -3,7 +3,7 @@ package com.splendore.services;
 import com.splendore.domain.rooms.Rooms;
 import com.splendore.domain.rooms.RoomsRequestDTO;
 import com.splendore.domain.rooms.RoomsResponseDTO;
-import com.splendore.exceptions.RoomNotFoundException;
+import com.splendore.exceptions.NotFoundException;
 import com.splendore.repositories.RoomsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,7 +46,7 @@ public class RoomsService {
 
     public Rooms getRoomById(long id) {
         return this.roomsRepository.findById(id).orElseThrow(
-                () -> new RoomNotFoundException("Room not found with id: " + id)
+                () -> new NotFoundException("Room not found with id: " + id)
         );
     }
 
@@ -59,7 +59,7 @@ public class RoomsService {
 
     public void deleteRoom(long id) {
         if (!roomsRepository.existsById(id)) {
-            throw new RoomNotFoundException("Room not found with id: " + id);
+            throw new NotFoundException("Room not found with id: " + id);
         }
         roomsRepository.deleteById(id);
     }
