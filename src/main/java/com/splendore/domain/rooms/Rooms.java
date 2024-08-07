@@ -1,6 +1,6 @@
 package com.splendore.domain.rooms;
 
-import com.splendore.domain.clients.Client;
+import com.splendore.domain.client.Client;
 import com.splendore.domain.rooms.enums.RoomsServices;
 import com.splendore.domain.rooms.enums.RoomsStatus;
 import com.splendore.domain.rooms.enums.RoomsLevel;
