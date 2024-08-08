@@ -32,6 +32,19 @@ public class RoomsService {
                 .collect(Collectors.toList());
     }
 
+    public Rooms getRoomById(long id) {
+        return this.roomsRepository.findById(id).orElseThrow(
+                () -> new NotFoundException("Room not found with id: " + id)
+        );
+    }
+
+    public List<Rooms> getRoomsByIds(List<Long> roomIds) {
+        return roomIds.stream()
+                .map(roomsRepository::findById)
+                .map(optionalRoom -> optionalRoom.orElseThrow(() -> new NotFoundException("Room not found")))
+                .collect(Collectors.toList());
+    }
+
     public Rooms createRoom(RoomsRequestDTO roomsRequestDTO) {
         Rooms room = new Rooms();
         room.setRoomsStatus(roomsRequestDTO.roomStatus());
@@ -42,12 +55,6 @@ public class RoomsService {
         room.setBedsInRoomNumber(roomsRequestDTO.bedsInRoomNumber());
 
         return this.roomsRepository.save(room);
-    }
-
-    public Rooms getRoomById(long id) {
-        return this.roomsRepository.findById(id).orElseThrow(
-                () -> new NotFoundException("Room not found with id: " + id)
-        );
     }
 
     public Rooms updateRoom(RoomsRequestDTO roomsRequestDTO, long id) {
