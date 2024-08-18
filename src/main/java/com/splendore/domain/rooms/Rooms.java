@@ -27,6 +27,7 @@ public class Rooms {
     private Long id;
 
     @Schema(description = "Current status of the room", example = "AVAILABLE", allowableValues = {"AVAILABLE", "OCCUPIED", "RESERVED"})
+    @Enumerated(EnumType.STRING)
     private RoomsStatus roomsStatus;
 
     @Schema(description = "Floor number where the room is located", example = "2")
@@ -36,9 +37,11 @@ public class Rooms {
     private Long roomsNumber;
 
     @Schema(description = "Level of the room", example = "GOLD", allowableValues = {"GOLD", "PLATINUM", "DIAMOND", "MASTER", "PRESIDENTIAL"})
+    @Enumerated(EnumType.STRING)
     private RoomsLevel roomsLevel;
 
     @Schema(description = "Services available in the room", example = "BREAKFAST", allowableValues = {"BREAKFAST", "LUNCH", "GYM", "SPA", "ALL"})
+    @Enumerated(EnumType.STRING)
     private RoomsServices roomsServices;
 
     @Schema(description = "Number of beds in the room", example = "2")
