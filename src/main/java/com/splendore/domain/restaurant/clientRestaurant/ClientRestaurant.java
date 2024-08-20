@@ -1,6 +1,7 @@
-package com.splendore.domain.restaurant;
+package com.splendore.domain.restaurant.clientRestaurant;
 
-import com.splendore.domain.restaurant.enums.ReservationStatus;
+import com.splendore.domain.restaurant.tables.Tables;
+import com.splendore.domain.restaurant.clientRestaurant.enums.ReservationStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

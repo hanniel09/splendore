@@ -1,5 +1,6 @@
-package com.splendore.domain.restaurant;
+package com.splendore.domain.restaurant.tables;
 
+import com.splendore.domain.restaurant.order.Order;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

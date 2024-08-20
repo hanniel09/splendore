@@ -1,4 +1,4 @@
-package com.splendore.domain.restaurant.enums;
+package com.splendore.domain.restaurant.clientRestaurant.enums;
 
 public enum ReservationStatus {
     PENDING,
