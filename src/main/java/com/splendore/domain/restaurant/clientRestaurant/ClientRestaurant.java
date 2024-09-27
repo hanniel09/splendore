@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-@Tables
+@Table
 @Setter
 @Getter
 @AllArgsConstructor
