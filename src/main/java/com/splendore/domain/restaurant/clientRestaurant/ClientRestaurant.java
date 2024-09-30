@@ -1,5 +1,6 @@
 package com.splendore.domain.restaurant.clientRestaurant;
 
+import com.splendore.domain.restaurant.clientRestaurant.enums.CustomerLocationConsumed;
 import com.splendore.domain.restaurant.tables.Tables;
 import com.splendore.domain.restaurant.clientRestaurant.enums.ReservationStatus;
 import jakarta.persistence.*;
@@ -38,4 +39,7 @@ public class ClientRestaurant {
     private ReservationStatus status;
     private String specialRequest;
     private Float totalOrderPrice;
+
+    private CustomerLocationConsumed customerLocationConsumed;
+    private Boolean hasOrderOpen;
 }
