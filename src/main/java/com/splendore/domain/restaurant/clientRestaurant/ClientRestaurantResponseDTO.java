@@ -16,7 +16,7 @@ public record ClientRestaurantResponseDTO(
         String email,
         String phone,
         LocalDateTime reservationDateTime,
-        ReservationStatus status,
+        String status,
         String specialRequest,
         Float totalOrderPrice,
         CustomerLocationConsumed customerLocationConsumed,
