@@ -21,7 +21,7 @@ public class TablesService {
     }
 
     public Tables getTablesRepositoryById(Long id) {
-        return tablesRepository.findById(id).orElseThrow(()-> new NotFoundException("Table not found"));
+        return tablesRepository.findById(id).orElseThrow(()-> new NotFoundException("Table not found with id: " + id));
     }
 
     public Tables crateTables(TablesRequestDTO tablesRequestDTO) {
