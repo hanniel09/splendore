@@ -25,4 +25,5 @@ public class OrderItem {
     private String itemName;
     private Integer quantity;
     private Float price;
+    private Integer tableNumber;
 }
