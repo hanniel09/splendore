@@ -33,10 +33,19 @@ now go to archive SplendoreApplication and run.
 
 ##### 
 
-#### Technologies used by splendore up to now
+## Technologies used by splendore up to now
 
 ##### Backend
 
 - Java
 - Spring boot
 - Spring JPA
+
+##### Interface 
+- Swagger.ui
+
+## Talk to me
+
+[Linkedin](https://www.linkedin.com/in/hannielvieira/)
+
+Email: hannielvieira1227@gmail.com
